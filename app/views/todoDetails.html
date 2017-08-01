@@ -1,0 +1,31 @@
+<a ng-href="/#/todos" class="btn btn-warning">Back</a><br>
+<div class="jumbotron addtodo-style">
+    <h2 ng-class="todo.completed ? 'done' : ''">{{ todo.name }}</h2>
+    <br>
+    <p ng-class="todo.completed ? 'done' : ''">{{todo.note}}</p>
+    completed: <input type="checkbox" ng-model="todo.completed">
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading"><h2>Edit Todo</h2></div>
+  <div class="panel-body">
+    <form role="form" ng-submit="updateTodo(todo._id, todo.name, todo.note, todo.completed)">
+    <div class="form-group ">
+    <label for="todoAdd">Todo</label>
+    <input ng-model="todo.name" type="text" class="form-control" id="todoAdd"placeholder="Enter your todo title.." required>
+  </div>
+  <div class="form-group">
+    <label for="search">Note</label>
+    <textarea ng-model="todo.note" rows="4" cols="50" class="form-control" id="search" placeholder="Enter your todo note.." required></textarea>
+  </div>
+  <div class="form-group">
+    <label for="search">Completed</label>
+    <input type="checkbox" ng-model="todo.completed">
+  </div>
+    
+    <div class="addtodo-btn">
+      <button type="submit" class="btn btn-success" type="submit">Update</button>
+    </div>
+</form>
+  </div>
+</div>

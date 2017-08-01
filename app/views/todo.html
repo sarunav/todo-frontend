@@ -1,0 +1,55 @@
+<div class="jumbotron addtodo-style">
+  <h1>Add Todo</h1>
+  <form role="form" ng-submit="add()">
+    <div class="form-group ">
+    <label for="todoAdd">Todo</label>
+    <input ng-model="addToDo.name" type="text" class="form-control" id="todoAdd"placeholder="Enter your todo title.." required>
+  </div>
+  <div class="form-group">
+    <label for="search">Note</label>
+    <textarea ng-model="addToDo.note" rows="4" cols="50" class="form-control" id="search" placeholder="Enter your todo note.." required></textarea>
+  </div>
+    
+    <div class="addtodo-btn">
+      <button type="submit" class="btn btn-success" type="submit">Add</button>
+    </div>
+</form>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading"><h2>Your Todos</h2></div>
+  <div class="panel-body">
+<div class="form-group col-md-4">
+    <label for="search">Search:</label>
+    <input ng-model="search.name" type="text" class="form-control" id="search" placeholder="Search todo">
+  </div>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Todo</th>
+            <th>Note</th>
+            <th>Completed</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="todo in todos | filter: search">
+            <td>{{$index + 1}}</td>
+            <td>
+              <a  ng-class="todo.completed ? 'done' : ''" ng-href="/#/todos/{{todo._id}}">{{todo.name}}</a>
+            </td>
+            <td>
+              <p ng-class="todo.completed ? 'done' : ''">{{todo.note}}</p>
+            </td>
+            <td>
+              <input type="checkbox" ng-change="complete(todo._id, todo.name, todo.note, todo.completed)" ng-model="todo.completed">
+            </td>
+            <td>
+              <a class="btn btn-success" ng-href="/#/todos/{{todo._id}}">Edit</a>
+              <a class=" btn btn-danger" href="" ng-click="deleteToDo(todo._id, $index)">Delete</a>
+            </td>
+    </tbody>
+</table>
+  </div>
+</div>
