@@ -2,20 +2,22 @@
 
 /**
  * @ngdoc overview
- * @name yoApp
+ * @name todoApp
  * @description
- * # yoApp
+ * # todoApp
  *
  * Main module of the application.
  */
 angular
-  .module('yoApp', [
+  .module('todoApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'oitozero.ngSweetAlert',
+    'toastr'
   ])
   .config(function ($routeProvider, $locationProvider) {
     $locationProvider.hashPrefix('');

@@ -2,23 +2,22 @@
 
 /**
  * @ngdoc function
- * @name yoApp.controller:AboutCtrl
+ * @name yoApp.controller:todoDetailCtrl
  * @description
- * # AboutCtrl
- * Controller of the yoApp
+ * # todoDetailCtrl
+ * Controller of the todoApp
  */
-angular.module('yoApp')
-  .controller('todoDetailCtrl', ['$scope', '$routeParams', 'Todos',
-  function ($scope, $routeParams, Todos) {
+angular.module('todoApp')
+  .controller('todoDetailCtrl', ['$scope', '$routeParams', 'Todos', 'toastr',
+  function ($scope, $routeParams, Todos, toastr) {
     
     Todos.id($routeParams.Id).then(function(response) {
         $scope.todo = response.data;
       });
 
       $scope.updateTodo = function(id, name, note, completed){
-        console.log("Working")
         Todos.update(id, name, note, completed).then(function(response){
-          alert("Updated successfully")
+          toastr.success("Updated successfully")
         })
       }
 

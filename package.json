@@ -1,5 +1,5 @@
 {
-  "name": "yo",
+  "name": "todo-frontend",
   "private": true,
   "devDependencies": {
     "autoprefixer-core": "^5.2.1",
@@ -28,6 +28,8 @@
     "jit-grunt": "^0.9.1",
     "time-grunt": "^1.0.0",
     "jshint-stylish": "^1.0.0"
+  },
+  "dependencies": {
   },
   "engines": {
     "node": ">=0.10.0"
