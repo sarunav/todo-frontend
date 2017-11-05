@@ -15,10 +15,10 @@ Run `grunt` for building and `grunt serve` for preview.
 
 Running `grunt test` will run the unit tests with karma.
 
-##Credits
+## Credits
 
-[Yeoman](http://yeoman.io/)
+[Yeoman](http://yeoman.io/)<br>
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.16.0.
-SweetAlert
+version 0.16.0.<br>
+SweetAlert<br>
 [angular-toastr](https://github.com/Foxandxss/angular-toastr)
