@@ -1,6 +1,6 @@
 <a ng-href="/#/todos" class="btn btn-warning">Back</a><br>
-<div class="jumbotron addtodo-style">
-    <h2 ng-class="todo.completed ? 'done' : ''">{{ todo.name }}</h2>
+<div class="jumbotron">
+    <h2 ng-class="todo.completed ? 'done' : ''" style="margin-top:0 !important">{{ todo.name }}</h2>
     <br>
     <p ng-class="todo.completed ? 'done' : ''">{{todo.note}}</p>
     completed: <input type="checkbox" ng-model="todo.completed">
