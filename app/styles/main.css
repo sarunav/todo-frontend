@@ -86,19 +86,24 @@ body {
   color: #5f5f5f;
 }
 .addtodo-style.jumbotron{
-text-align: left !important;
 margin-top: 10px;
 }
-.addtodo-style h1{
-  text-align: center !important;
-  margin-bottom: 20px;
+.addtodo-style h2{
+  margin-top: 50px;
 }
-.addtodo-style label{
-  text-align: left !important;
+.form-wrapper label{
+  float: left;
 }
-.addtodo-style .addtodo-btn{
+.form-wrapper .addtodo-btn{
   text-align: center !important
 }
 .panel-heading h2{
 text-align: center !important
+}
+.mean-logo{
+  width: 50%;
+  display: inline-block;
+}
+.addtodo-style img{
+  text-align: center;
 }
